@@ -9,9 +9,9 @@ import classes from "./index.module.scss"
 const HeaderComponent = ({ header }: {header: Header }) => {
   return (
     <nav className={[classes.header]}>
-      <Gutter>
+      <Gutter className={classes.wrap}>
         <Link href="/">
-          <img src="/logo-black.svg" alt="logo" />
+          <img src="/logo-black.svg" alt="logo" className={classes.logo}/>
         </Link>  
       </Gutter> 
     </nav>

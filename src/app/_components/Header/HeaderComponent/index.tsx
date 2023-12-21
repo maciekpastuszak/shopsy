@@ -6,6 +6,7 @@ import { Gutter } from '../../Gutter'
 
 import classes from "./index.module.scss"
 import Image from 'next/image'
+import { HeaderNav } from '../Nav'
 
 const HeaderComponent = ({ header }: {header: Header }) => {
   return (
@@ -14,6 +15,9 @@ const HeaderComponent = ({ header }: {header: Header }) => {
         <Link href="/">
           <Image src="/logo-black.svg" alt="logo" width={170} height={50} />
         </Link>  
+
+        <HeaderNav header={header} />
+        <HeaderMobileNav header={header} />
       </Gutter> 
     </nav>
   )

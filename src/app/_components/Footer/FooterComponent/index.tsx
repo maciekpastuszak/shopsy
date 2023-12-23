@@ -14,7 +14,7 @@ const FooterComponent = () => {
     <footer className={noHeaderFooterUrls.includes(pathname) ? classes.hide : ''}>
       <Gutter>
         <ul className={classes.inclusions}>
-          {inclusions.map((inclusion, index) => (
+          {inclusions.map((inclusion) => (
             <li key={inclusion.title}>
               <Image 
                 src={inclusion.icon}
@@ -25,10 +25,15 @@ const FooterComponent = () => {
               />
               
               <h5 className={classes.title}>{inclusion.title}</h5>
+              <p>{inclusion.description}</p>
             </li>
           ))}
         </ul>
       </Gutter>
+
+      <div className={classes.footer}>
+
+      </div>
     </footer>
   )
 }

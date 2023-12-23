@@ -14,15 +14,16 @@ const FooterComponent = () => {
     <footer className={noHeaderFooterUrls.includes(pathname) ? classes.hide : ''}>
       <Gutter>
         <ul className={classes.inclusions}>
-          {inclusions.map((inclusion, index) = > (
+          {inclusions.map((inclusion, index) => (
             <li key={inclusion.title}>
               <Image 
                 src={inclusion.icon}
                 alt={inclusion.title}
                 width={36}
-                heighth={36}
+                height={36}
                 className={classes.icon}
               />
+
             </li>
           ))}
         </ul>

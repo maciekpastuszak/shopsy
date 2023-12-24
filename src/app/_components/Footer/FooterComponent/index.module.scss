@@ -1,7 +1,7 @@
-@use '../../_css/queries.scss' as *;
+@use '../../../_css/queries.scss' as *;
 
 .footer {
-  padding: calc(var(--base) * 4) 0;
+  padding: 30px 0;
   background-color: var(--theme-elevation-1000);
   color: var(--theme-elevation-0);
 
@@ -10,34 +10,24 @@
   }
 }
 
-:global([data-theme="dark"]) {
-  .footer {
-    background-color: var(--theme-elevation-50);
-    color: var(--theme-elevation-1000);
+
+.inclusions {
+  display: grid;
+  justify-content: center;
+  gap: 30px;
+  padding: 0;
+  grid-template-columns: repeat(4, 1fr);
+  margin: 100px 0;
+
+  @include large-break {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include mid-break {
+    margin: 60px 0;
+  }
+
+  @include extra-small-break {
+    grid-template-columns: 1fr;
   }
 }
-
-.wrap {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: calc(var(--base) / 2) var(--base);
-  }
-  
-  .logo {
-    width: 150px;
-  }
-  
-  .nav {
-    display: flex;
-    gap: calc(var(--base) / 4) var(--base);
-    align-items: center;
-    flex-wrap: wrap;
-    opacity: 1;
-    transition: opacity 100ms linear;
-    visibility: visible;
-  
-    > * {
-      text-decoration: none;
-    }
-  }

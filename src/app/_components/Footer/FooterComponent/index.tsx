@@ -32,7 +32,13 @@ const FooterComponent = () => {
       </Gutter>
 
       <div className={classes.footer}>
-
+          <Gutter>
+            <div className={classes.wrap}>
+              <Link href="/">
+                
+              </Link>
+            </div>
+          </Gutter>
       </div>
     </footer>
   )

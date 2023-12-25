@@ -42,7 +42,17 @@ const FooterComponent = ({ footer }: {footer: Footer}) => {
 
               <p>{footer.copyright}</p>
 
-              
+              <div className={classes.socialLinks}>
+                {profileNavItems.map((item) => {
+                  const icon = '';
+
+                  return (
+                    <Button>
+                      {item.link.label}
+                    </Button>
+                  )
+                })}
+              </div>
             </div>
           </Gutter>
       </div>

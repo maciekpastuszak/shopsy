@@ -53,7 +53,7 @@ const FooterComponent = ({ footer }: {footer: Footer}) => {
                     el="link"
                     href={item.link.url}
                     newTab={true}
-                    className={classes.socialLinkItrm}
+                    className={classes.socialLinkItem}
                     >
                       {item.link.label}
                     </Button>

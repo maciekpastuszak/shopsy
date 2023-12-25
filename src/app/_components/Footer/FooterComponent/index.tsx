@@ -3,12 +3,13 @@
 import React from 'react'
 
 import classes from './index.module.scss'
-import { inclusions, noHeaderFooterUrls } from '../../../constants'
+import { inclusions, noHeaderFooterUrls, profileNavItems } from '../../../constants'
 import { usePathname } from 'next/navigation'
 import { Gutter } from '../../Gutter'
 import Image from 'next/image'
 import { Footer } from '../../../../payload/payload-types'
 import Link from 'next/link'
+import { Button } from 'payload/components'
 
 const FooterComponent = ({ footer }: {footer: Footer}) => {
   const pathname = usePathname();
@@ -47,7 +48,11 @@ const FooterComponent = ({ footer }: {footer: Footer}) => {
                   const icon = '';
 
                   return (
-                    <Button>
+                    <Button 
+                    key={item.link.label}
+                    el="link"
+                    href={item.ink.url}
+                    >
                       {item.link.label}
                     </Button>
                   )

@@ -11,7 +11,7 @@ export const Footer: GlobalConfig = {
     {
       name: 'copyright',
       label: 'Copyright',
-      type: 'test',
+      type: 'text',
       required: true,
     },
     {

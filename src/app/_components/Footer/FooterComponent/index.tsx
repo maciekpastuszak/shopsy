@@ -51,7 +51,7 @@ const FooterComponent = ({ footer }: {footer: Footer}) => {
                     <Button 
                     key={item.link.label}
                     el="link"
-                    href={item.ink.url}
+                    href={item.link.url}
                     >
                       {item.link.label}
                     </Button>

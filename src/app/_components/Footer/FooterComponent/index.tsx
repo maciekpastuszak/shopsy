@@ -8,6 +8,7 @@ import { usePathname } from 'next/navigation'
 import { Gutter } from '../../Gutter'
 import Image from 'next/image'
 import { Footer } from '../../../../payload/payload-types'
+import Link from 'next/link'
 
 const FooterComponent = ({ footer }: {footer: Footer}) => {
   const pathname = usePathname();
@@ -40,6 +41,8 @@ const FooterComponent = ({ footer }: {footer: Footer}) => {
               </Link>
 
               <p>{footer.copyright}</p>
+
+              
             </div>
           </Gutter>
       </div>

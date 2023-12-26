@@ -9,7 +9,8 @@ import { Gutter } from '../../Gutter'
 import Image from 'next/image'
 import { Footer } from '../../../../payload/payload-types'
 import Link from 'next/link'
-import { Button } from 'payload/components'
+import { Button } from '../../Button'
+
 
 const FooterComponent = ({ footer }: {footer: Footer}) => {
   const pathname = usePathname();

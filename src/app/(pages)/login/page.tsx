@@ -29,6 +29,12 @@ export default async function Login() {
           />
         </Link>
       </div>
+
+      <div className={classes.formWrapper}>
+        <div className={classes.formContainer}>
+          <RenderParams className={classes.params} />
+        </div>
+      </div>
    </section>
   )
 }

@@ -61,7 +61,7 @@ const FooterComponent = ({ footer }: {footer: Footer}) => {
                     >
                       <Image 
                         src={icon?.url}
-                        akt={item/link.label}
+                        alt={item.link.label}
                         width={24}
                         height={24}
                         className={classes.socialIcon}

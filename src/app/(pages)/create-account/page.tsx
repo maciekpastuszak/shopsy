@@ -19,7 +19,7 @@ export default async function CreateAccount() {
   })
 
   return (
-    <section className={classes.login}>
+    <section className={classes.CreateAccount}>
     <div className={classes.heroImg}>
       <Link href="/">
         <Image 
@@ -37,7 +37,7 @@ export default async function CreateAccount() {
         <RenderParams className={classes.params} />
       
         <div className={classes.formTitle}>
-          <h3>Welcome</h3>
+          <h3>Create accpount</h3>
           <Image 
             src="assets/icons/hand.png" 
             alt="hand"
@@ -46,7 +46,7 @@ export default async function CreateAccount() {
           />
         </div>
 
-        <p>Please login here</p>
+        <p>Please enter details</p>
 
         <CreateAccountForm />
       </div>

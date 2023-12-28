@@ -1,5 +1,20 @@
-@import "../../_css/common";
+@import '../../_css/common';
 
 .recoverPassword {
-  margin-bottom: var(--block-padding);
+  display: grid;
+  grid-template-columns: 1fr 45%;
+  height: 100vh;
+  font-family: var(--font-jost);
+
+  @include mid-break {
+    grid-template-columns: 1fr;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url('/assets/images/image-3.svg');
+  }
+
+  p {
+    color: var(--color-gray-500);
+  }
 }

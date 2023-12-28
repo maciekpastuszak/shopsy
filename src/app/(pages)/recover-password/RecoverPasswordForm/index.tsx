@@ -50,6 +50,8 @@ export const RecoverPasswordForm: React.FC = () => {
     <Fragment>
       {!success && (
         <React.Fragment>
+
+          <p>Enter your registered email addess. We'll send you a code to reset your password.</p>
           <h1>Recover Password</h1>
           <div className={classes.formWrapper}>
             <p>

@@ -52,14 +52,6 @@ export const RecoverPasswordForm: React.FC = () => {
         <React.Fragment>
 
           <p>Enter your registered email addess. We'll send you a code to reset your password.</p>
-          <h1>Recover Password</h1>
-          <div className={classes.formWrapper}>
-            <p>
-              {`Please enter your email below. You will receive an email message with instructions on
-              how to reset your password. To manage your all users, `}
-              <Link href="/admin/collections/users">login to the admin dashboard</Link>
-              {'.'}
-            </p>
             <form onSubmit={handleSubmit(onSubmit)} className={classes.form}>
               <Message error={error} className={classes.message} />
               <Input
@@ -77,7 +69,6 @@ export const RecoverPasswordForm: React.FC = () => {
                 className={classes.submit}
               />
             </form>
-          </div>
         </React.Fragment>
       )}
       {success && (

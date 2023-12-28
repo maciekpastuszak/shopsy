@@ -37,7 +37,7 @@ export default async function CreateAccount() {
         <RenderParams className={classes.params} />
       
         <div className={classes.formTitle}>
-          <h3>Create accpount</h3>
+          <h3>Create account</h3>
           <Image 
             src="assets/icons/hand.png" 
             alt="hand"

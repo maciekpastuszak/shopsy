@@ -1,0 +1,30 @@
+@import '../../_css/queries.scss';
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+
+  @include small-break {
+    margin: 0;
+  }
+}
+
+.heroWrapper {
+  background-color: var(--color-dark-50);
+  width: 100%;
+  max-width: 1560px;
+  max-height: 884px;
+  display: flex;
+  align-items: center;
+
+  background-size: cover;
+  background-position: revert;
+  background-repeat: no-repeat;
+
+  @include small-break {
+    background-size: cover;
+    background-position: center;
+  }
+}

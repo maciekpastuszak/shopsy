@@ -29,7 +29,7 @@ export default async function RecoverPassword() {
         <div className={classes.formContainer}>
           <RenderParams className={classes.params} />
           <div className={classes.formTitle}>
-            <h3>Welcome</h3>
+            <h3>Forgot Password</h3>
             <Image 
               src="assets/icons/hand.png" 
               alt="hand"
@@ -37,8 +37,6 @@ export default async function RecoverPassword() {
               height={30}
             />
           </div>
-
-          <p>Please login here</p>
 
           <RecoverPasswordForm />
         </div>

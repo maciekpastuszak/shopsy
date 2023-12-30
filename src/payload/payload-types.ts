@@ -170,14 +170,15 @@ export interface Media {
   height?: number
 }
 export interface Category {
-  id: string
-  title?: string
-  parent?: string | Category
+  id: string;
+  title: string;
+  media?: string | Media | null;
+  parent?: string | Category;
   breadcrumbs?: {
-    doc?: string | Category
-    url?: string
-    label?: string
-    id?: string
+    doc?: string | Category;
+    url?: string;
+    label?: string;
+    id?: string;
   }[]
   updatedAt: string
   createdAt: string

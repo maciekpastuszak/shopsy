@@ -1,8 +1,14 @@
 import React from 'react'
 
+import classes from './index.module.scss'
+
 const Categories = () => {
   return (
-    <div>Categories</div>
+    <section className={classes.container}>
+        <div className={classes.titleWrapper}>
+
+        </div>
+    </section>
   )
 }
 

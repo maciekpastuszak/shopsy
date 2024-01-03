@@ -1,6 +1,6 @@
 'use client'
 
-import { ReactNode } from 'react';
+import { ReactNode, createContext, useState } from 'react';
 
 export const INITIAL_FILTER_DATA = {
     categoryFilters: [],
@@ -13,8 +13,15 @@ export const INITIAL_FILTER_DATA = {
 
   export const FilterProvider = ({ children }: { children: React.ReactNode }) => {
 
+    const [categoryFilters, setCategoryFilters] = useState([])
+    const [sort, setSort] = useState('-createdAt')
     return (
-      <FilterContext.Provider>
+      <FilterContext.Provider value={{
+        categoryFilters,
+        setCategoryFilters,
+        sort,
+        setSort
+      }}>
         {children}
       </FilterContext.Provider>
     )

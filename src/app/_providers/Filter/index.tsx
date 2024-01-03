@@ -11,4 +11,11 @@ export const INITIAL_FILTER_DATA = {
 
   const FilterContext = createContext(INITIAL_FILTER_DATA)
 
-  export const FilterProvider = ({ children }: { children: React.ReactNode })
+  export const FilterProvider = ({ children }: { children: React.ReactNode }) => {
+
+    return (
+      <FilterContext.Provider>
+        {children}
+      </FilterContext.Provider>
+    )
+  }

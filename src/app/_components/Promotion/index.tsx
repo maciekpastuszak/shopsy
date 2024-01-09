@@ -1,8 +1,14 @@
 import React from 'react'
 
+import classes from './index.module.scss';
+
 const Promotion = () => {
   return (
-    <div>Promotion</div>
+    <section className={classes.promotion}>
+        <div className={classes.textBox}>
+
+        </div>
+    </section>
   )
 }
 

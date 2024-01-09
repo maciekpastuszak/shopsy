@@ -22,3 +22,17 @@
   gap: 30px;
 }
 
+.image {
+  min-height: 500px;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.dealBtn {
+  width: fit-content;
+
+  @include mid-break {
+    width: 100%;
+  }
+}

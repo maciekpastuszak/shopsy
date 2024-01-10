@@ -1,0 +1,22 @@
+@import '../../../_css/common';
+
+.filters {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  @include large-break {
+    flex-direction: row;
+    gap: 40px;
+  }
+  
+  @include small-break {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  @include small-break {
+    margin-top: 16px;
+  }
+}

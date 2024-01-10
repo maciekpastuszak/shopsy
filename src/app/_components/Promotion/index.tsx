@@ -19,7 +19,10 @@ const Promotion = () => {
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus quo in optio! Labore amet pariatur quibusdam deleniti sequi itaque inventore. Expedita quas nisi iure repudiandae dolore recusandae reiciendis accusamus perferendis?</p>
 
             <ul className={classes.stats}>
-              <StatBox label="Days" value="" />
+              <StatBox label="Days" value={time.days} />
+              <StatBox label="Hours" value={time.hours} />
+              <StatBox label="Minutes" value={time.minutes} />
+              <StatBox label="Seconds" value={time.seconds} />
             </ul>
         </div>
     </section>

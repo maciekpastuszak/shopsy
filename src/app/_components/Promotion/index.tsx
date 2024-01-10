@@ -1,8 +1,15 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 import classes from './index.module.scss';
 
 const Promotion = () => {
+  const [time, setTime] = useState({
+    days: 0,
+    hours: 0,
+    minutes: 0,
+    seconds: 0,
+  })
+
   return (
     <section className={classes.promotion}>
         <div className={classes.textBox}>
@@ -10,7 +17,7 @@ const Promotion = () => {
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus quo in optio! Labore amet pariatur quibusdam deleniti sequi itaque inventore. Expedita quas nisi iure repudiandae dolore recusandae reiciendis accusamus perferendis?</p>
 
             <ul className={classes.stats}>
-
+              <StatBox label="Days" value="" />
             </ul>
         </div>
     </section>

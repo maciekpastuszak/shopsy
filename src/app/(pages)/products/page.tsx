@@ -7,6 +7,7 @@ import { Blocks } from '../../_components/Blocks';
 import { Category, Page } from '../../../payload/payload-types';
 import { fetchDoc } from '../../_api/fetchDoc';
 import { draftMode } from 'next/headers';
+import { fetchDocs } from '../../_api/fetchDocs';
 
 const Products = async () => {
   const { isEnabled: isDraftMode } = draftMode();
@@ -19,6 +20,8 @@ const Products = async () => {
       slug: 'products',
       draft: isDraftMode,
     })
+
+    categories = await fetchDocs<Category>('categories');
   } catch (error) {
     console.log(error)
   }

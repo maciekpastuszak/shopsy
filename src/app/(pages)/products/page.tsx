@@ -30,7 +30,7 @@ const Products = async () => {
     <div className={classes.coontainer}>
         <Gutter className={classes.products}>
           <Filters />
-          <Blocks blocks={layout} disableTopPadding={true} />
+          <Blocks blocks={page.layout} disableTopPadding={true} />
         </Gutter>
     </div>
   )

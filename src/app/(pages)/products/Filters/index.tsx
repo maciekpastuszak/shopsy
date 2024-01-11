@@ -5,7 +5,7 @@ const Filters = () => {
   return (
     <div className={classes.filters}>
       <div>
-        <h6></h6>
+        <h6 className={classes.title}>Product Categories</h6>
       </div>
     </div>
   )

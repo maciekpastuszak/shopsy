@@ -2,7 +2,9 @@ import React from 'react'
 
 import classes from './index.module.scss';
 import { useFilter } from '../../../_providers/Filter';
-const Filters = () => {
+import { Category } from '../../../../payload/payload-types';
+
+const Filters = ({ categories }: {categories: Category[]}) => {
   const {categoryFilters, sort, setCategoryFilters, setSort} = useFilter();
 
   const handleCategories = (categoryId: string) => {}
@@ -11,7 +13,10 @@ const Filters = () => {
       <div>
         <h6 className={classes.title}>Product Categories</h6>
         <div className={classes.categories}>
+          {categories.map((category) => {
+            const isSelected = false;
 
+          })}
         </div>
       </div>
     </div>

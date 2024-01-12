@@ -19,3 +19,18 @@
   outline: none;
   cursor: pointer;
 }
+
+.checkbox:checked {
+  background-color: var(--color-dark-500);
+  position: relative;
+}
+
+.checkbox:checked::before {
+  content: '\2713';
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+  position: abslute;
+  right: 5px;
+  top: 0;
+}

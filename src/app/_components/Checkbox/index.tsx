@@ -1,9 +1,18 @@
-import React from 'react'
+import React, { ChangeEvent, useState } from 'react'
 
-const Checkbox = () => {
+import classes from './index.module.scss'
+
+export const Checkbox = () => {
+
   return (
-    <div>Checkbox</div>
+    <label className={classes.checkboxWrapper}>
+      <input
+        type="checkbox"
+        checked={isChecked}
+        onChange={handleCheckboxChange}
+        className={classes.checkbox}
+      />
+      {label}
+    </label>
   )
 }
-
-export default Checkbox

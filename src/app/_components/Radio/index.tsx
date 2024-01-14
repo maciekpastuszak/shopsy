@@ -1,9 +1,16 @@
 import React from 'react'
 
-const index = () => {
+import classes from './index.module.scss'
+
+export const RadioButton = ({
+}) => {
+  
+
   return (
-    <div>index</div>
+    <label className={classes.radioWrapper}>
+      <input
+      />
+      {label}
+    </label>
   )
 }
-
-export default index

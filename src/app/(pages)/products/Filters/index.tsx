@@ -40,7 +40,7 @@ const Filters = ({ categories }: {categories: Category[]}) => {
             label="latest"
             value="createdAt"
             isSelected={sort === '-createdAt'}
-            onRadioChange={handlSort}
+            onRadioChange={handleSort}
             groupName="sort"
           />
         </div>

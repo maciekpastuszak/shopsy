@@ -11,8 +11,15 @@ interface RadioButtonProps {
 }
 
 export const RadioButton: React.FC<RadioButtonProps> = ({
+  label,
+  value,
+  isSelected,
+  onRadioChange,
+  groupName,
 }) => {
-  
+  const handleRadioChange = () => {
+    onRadioChange(value)
+  }
 
   return (
     <label className={classes.radioWrapper}>

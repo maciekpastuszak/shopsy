@@ -47,3 +47,24 @@
   font-weight: 600;
   margin: 0;
 }
+
+.leader {
+  @extend %label;
+  display: flex;
+  gap: var(--base);
+}
+
+.description {
+  margin: 0;
+  line-height: 24px;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.hideImageOnMobile {
+  @include mid-break {
+    display: none;
+  }
+}

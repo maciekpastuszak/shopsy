@@ -170,7 +170,6 @@ export const CollectionArchive: React.FC<Props> = props => {
       {!isLoading && error && <div>{error}</div>}
       <Fragment>
         {showPageRange !== false && populateBy !== 'selection' && (
-          <Gutter>
             <div className={classes.pageRange}>
               <PageRange
                 collection={relationTo}
@@ -179,15 +178,11 @@ export const CollectionArchive: React.FC<Props> = props => {
                 totalDocs={results.totalDocs}
               />
             </div>
-          </Gutter>
         )}
-        <Gutter>
           <div className={classes.grid}>
             {results.docs?.map((result, index) => {
               return (
-                <div className={classes.column} key={index}>
                   <Card doc={result} relationTo={relationTo} showCategories />
-                </div>
               )
             })}
           </div>
@@ -199,7 +194,6 @@ export const CollectionArchive: React.FC<Props> = props => {
               totalPages={results.totalPages}
             />
           )}
-        </Gutter>
       </Fragment>
     </div>
   )

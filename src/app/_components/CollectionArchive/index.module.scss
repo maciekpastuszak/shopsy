@@ -27,3 +27,37 @@
     margin-bottom: var(--base);
   }
 }
+
+.pageRange {
+  margin-bottom: var(--base);
+
+  @include mid-break {
+    margin-bottom: var(--base);
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(30%, 1fr));
+  gap: 30px;
+  padding: 0;
+  width: 100%;
+
+  @include mid-break {
+    gap: 20px;
+  }
+
+  @include small-break {
+    grid-template-columns: 100%;
+  }
+}
+
+.pagination {
+  margin-top: calc(var(--base) * 4);
+  display: flex;
+  justify-content: center;
+
+  @include mid-break {
+    margin-top: var(--base);
+  }
+}

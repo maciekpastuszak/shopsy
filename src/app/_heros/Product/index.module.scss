@@ -28,3 +28,19 @@
   max-width: 100%;
 }
 
+.details {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+.categoryWrapper {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 16px;
+  margin-top: 8px;
+}
+
+.category {
+  font-size: 16px;
+}

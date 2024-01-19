@@ -34,12 +34,11 @@ export default async function Product({ params: { slug } }) {
     notFound()
   }
 
-  const { layout, relatedProducts } = product
+  const { relatedProducts } = product
 
   return (
-    <React.Fragment>
+    <>
       <ProductHero product={product} />
-      <Blocks blocks={layout} />
       {product?.enablePaywall && <PaywallBlocks productSlug={slug as string} disableTopPadding />}
       <Blocks
         disableTopPadding
@@ -82,7 +81,7 @@ export default async function Product({ params: { slug } }) {
           },
         ]}
       />
-    </React.Fragment>
+    </>
   )
 }
 

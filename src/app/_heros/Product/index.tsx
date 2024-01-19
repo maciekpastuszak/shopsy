@@ -34,22 +34,25 @@ export const ProductHero: React.FC<{
 
           <div className={classes.details}>
               <h3 className={classes.title}>{title}</h3>
-          </div>
-          <div className={classes.categories}>
-            {categories?.map((category, index) => {
-              const { title: categoryTitle } = category
 
-              const titleToUse = categoryTitle || 'Untitled category'
+              <div className={classes.categoryWrapper}>
+                <div className={classes.categories}>
+                  {categories?.map((category, index) => {
+                    const { title: categoryTitle } = category
 
-              const isLast = index === categories.length - 1
+                    const titleToUse = categoryTitle || 'Untitled category'
 
-              return (
-                <Fragment key={index}>
-                  {titleToUse}
-                  {!isLast && <Fragment>, &nbsp;</Fragment>}
-                </Fragment>
-              )
-            })}
+                    const isLast = index === categories.length - 1
+
+                    return (
+                      <Fragment key={index}>
+                        {titleToUse}
+                        {!isLast && <Fragment>, &nbsp;</Fragment>}
+                      </Fragment>
+                    )
+                  })}
+                </div>
+              </div>
           </div>
           <div>
             <p className={classes.description}>

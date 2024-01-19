@@ -45,10 +45,10 @@ export const ProductHero: React.FC<{
                     const isLast = index === categories.length - 1
 
                     return (
-                      <Fragment key={index}>
+                      <p key={index} className={classes.category}>
                         {titleToUse}
-                        {!isLast && <Fragment>, &nbsp;</Fragment>}
-                      </Fragment>
+                        {!isLast && <Fragment>, &nbsp;</Fragment>} <span className={classes.separator}></span>
+                      </p>
                     )
                   })}
                 </div>

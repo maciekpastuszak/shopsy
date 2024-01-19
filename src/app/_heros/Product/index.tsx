@@ -51,7 +51,6 @@ export const ProductHero: React.FC<{
               )
             })}
           </div>
-          <h1 className={classes.title}>{title}</h1>
           <div>
             <p className={classes.description}>
               {`${description ? `${description} ` : ''}To edit this product, `}

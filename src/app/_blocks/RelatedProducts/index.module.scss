@@ -28,27 +28,7 @@
     template-columns: 100%
   }
 }
-
-.cols-half {
-  grid-column-end: span 6;
-
-  @include mid-break {
-    grid-column-end: span 6;
-  }
-
-  @include small-break {
-    grid-column-end: span 6;
-  }
-}
-
-.cols-thirds {
-  grid-column-end: span 3;
-
-  @include mid-break {
-    grid-column-end: span 6;
-  }
-
-  @include small-break {
-    grid-column-end: span 6;
-  }
+.title {
+  font-weight: 400;
+  margin-bottom: 30px;
 }

@@ -17,9 +17,8 @@
   display: grid;
   padding: 0;
   grid-template-columns: repeat(3, minmax(30%, 1fr));
-}
+  gap: 30px;
 
-.column {
   @include mid-break {
     gap: 20px;
   }
@@ -28,6 +27,7 @@
     template-columns: 100%
   }
 }
+
 .title {
   font-weight: 400;
   margin-bottom: 30px;

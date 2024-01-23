@@ -15,6 +15,28 @@
   background-color: var(--color-dark-50);
 }
 
+.media {
+  position: relative;
+  height: 100%;
+}
+
+.image {
+  object-fit: contain;
+  max-width: 100%;
+  aspect-ratio: 1 / 1;
+}
+
+.itemDetails {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 16px;
+  align-items: center;
+
+  @include small-break {
+    grid-template-columns: 1fr;
+  }
+}
+
 .titleWrapper {
   white-space: nowrap;
   overflow: hidden;

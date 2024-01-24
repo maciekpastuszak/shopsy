@@ -25,6 +25,11 @@ const CartItem = ({ product, title, metaImage, qty, addItemToCart }) => {
           />
         )}
       </Link>
+      <div className={classes.itemDetails}>
+        <div className={classes.titileWrapper}>
+          <h6>{title}</h6>
+        </div>
+      </div>
     </li>
   )
 }

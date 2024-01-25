@@ -7,6 +7,7 @@ import { Media } from '../../../_components/Media'
 import Link from 'next/link'
 import { Price } from '../../../_components/Price'
 import Image from 'next/image'
+import { RemoveFromCartButton } from '../../../_components/RemoveFromCartButton'
 
 const CartItem = ({ product, title, metaImage, qty, addItemToCart }) => {
   const [quantity, setQuantity] = useState(qty)
@@ -34,7 +35,7 @@ const CartItem = ({ product, title, metaImage, qty, addItemToCart }) => {
         </div>
 
         <div className={classes.quantity}>
-          <div className={classes.quantityButton} onClick={decrementQty}>
+          <div className={classes.quantityBtn} onClick={decrementQty}>
             <Image src="/assets/icons/minus.svg" alt="minus" width={24} height={24} className={classes.qtnBt} />
           </div>
 
@@ -49,6 +50,11 @@ const CartItem = ({ product, title, metaImage, qty, addItemToCart }) => {
             <Image src="/assets/icons/plus.svg" alt="plus" width={24} height={24} className={classes.qtnBt} />
           </div>
         </div>
+      </div>
+
+      <div className={classes.subtotalWrapper}>
+          <Price product={product} button={false} quantity={quantity} />
+          <RemoveFromCartButton product={product} />
       </div>
     </li>
   )

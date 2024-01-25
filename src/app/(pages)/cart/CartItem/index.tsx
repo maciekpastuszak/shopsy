@@ -35,7 +35,7 @@ const CartItem = ({ product, title, metaImage, qty, addItemToCart }) => {
 
         <div className={classes.quantity}>
           <div className={classes.quantityButton} onClick={decrementQty}>
-            <Image src="/assets/icons/minus.svg" />
+            <Image src="/assets/icons/minus.svg" alt="minus" width={24} height={24} className={classes.qtnBt} />
           </div>
         </div>
       </div>

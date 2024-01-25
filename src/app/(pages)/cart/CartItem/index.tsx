@@ -5,6 +5,8 @@ import React, { useState } from 'react'
 import classes from './index.module.scss'
 import { Media } from '../../../_components/Media'
 import Link from 'next/link'
+import { Price } from '../../../_components/Price'
+import Image from 'next/image'
 
 const CartItem = ({ product, title, metaImage, qty, addItemToCart }) => {
   const [quantity, setQuantity] = useState(qty)
@@ -28,6 +30,13 @@ const CartItem = ({ product, title, metaImage, qty, addItemToCart }) => {
       <div className={classes.itemDetails}>
         <div className={classes.titileWrapper}>
           <h6>{title}</h6>
+          <Price product={product} button={false} />
+        </div>
+
+        <div className={classes.quantity}>
+          <div className={classes.quantityButton} onClick={decrementQty}>
+            <Image src="/assets/icons/minus.svg" />
+          </div>
         </div>
       </div>
     </li>

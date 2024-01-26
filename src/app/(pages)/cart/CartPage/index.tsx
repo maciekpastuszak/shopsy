@@ -59,7 +59,10 @@ export const CartPage: React.FC<{
               <div>
               {/* CART LIST HEADER */}
               <div className={classes.header}>
-
+                <p>Products</p>
+                <div className={classes.headerItemDetails}>
+                  <p>Quantity</p>
+                </div>
               </div>
               {/* CART ITEM LIST */}
                 <ul className={classes.itemsList}>

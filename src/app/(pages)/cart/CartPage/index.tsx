@@ -55,18 +55,10 @@ export const CartPage: React.FC<{
               )}
             </div>
           ) : (
-            <div className={classes.items}>
-              <div className={classes.itemsTotal}>
-                {`There ${cart?.items?.length === 1 ? 'is' : 'are'} ${cart?.items?.length} item${
-                  cart?.items?.length === 1 ? '' : 's'
-                } in your cart.`}
-                {!user && (
-                  <Fragment>
-                    {' '}
-                    <Link href={`/login?redirect=%2Fcart`}>Log in</Link>
-                    {` to save your progress.`}
-                  </Fragment>
-                )}
+            <div className={classes.cartWrapper}>
+              <div>
+              {/* CART LIST HEADER */}
+              </div>
               </div>
               <ul className={classes.itemsList}>
                 {cart?.items?.map((item, index) => {

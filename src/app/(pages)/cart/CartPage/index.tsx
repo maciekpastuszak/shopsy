@@ -58,35 +58,39 @@ export const CartPage: React.FC<{
             <div className={classes.cartWrapper}>
               <div>
               {/* CART LIST HEADER */}
+              <div className={classes.header}>
+
+              </div>
+              {/* CART ITEM LIST */}
+                <ul className={classes.itemsList}>
+                  {cart?.items?.map((item, index) => {
+                    if (typeof item.product === 'object') {
+                      const {
+                        quantity,
+                        product,
+                        product: { id, title, meta, stripeProductID },
+                      } = item
+
+                      const isLast = index === (cart?.items?.length || 0) - 1
+
+                      const metaImage = meta?.image
+
+                      return (
+                        <CartItem 
+                          product={product}
+                          title={title}
+                          metaImage={metaImage}
+                          index={index}
+                          qty={quantity}
+                          addItemToCart={addItemToCart}
+                        />
+                      )
+                    }
+                    return null
+                  })}
+                </ul>
               </div>
               </div>
-              <ul className={classes.itemsList}>
-                {cart?.items?.map((item, index) => {
-                  if (typeof item.product === 'object') {
-                    const {
-                      quantity,
-                      product,
-                      product: { id, title, meta, stripeProductID },
-                    } = item
-
-                    const isLast = index === (cart?.items?.length || 0) - 1
-
-                    const metaImage = meta?.image
-
-                    return (
-                      <CartItem 
-                        product={product}
-                        title={title}
-                        metaImage={metaImage}
-                        index={index}
-                        qty={quantity}
-                        addItemToCart={addItemToCart}
-                      />
-                    )
-                  }
-                  return null
-                })}
-              </ul>
               <div className={classes.summary}>
                 <div className={classes.row}>
                   <h6 className={classes.cartTotal}>Summary</h6>

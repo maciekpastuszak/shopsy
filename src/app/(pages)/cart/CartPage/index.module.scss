@@ -14,4 +14,23 @@
   }
 }
 
+.header {
+  display: grid;
+  grid-template-columns: 100px 2fr 1fr;
+  gap: 24px;
+  margin-bottom: 8px;
+
+  @include small-break {
+    display: none;
+  }
+}
+
+.headeritemDetails {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+}
+
+.headersubtotal {
+  text-align: end;
+}
 

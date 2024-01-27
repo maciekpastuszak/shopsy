@@ -98,6 +98,11 @@ export const CartPage: React.FC<{
                 <div className={classes.row}>
                   <h6 className={classes.cartTotal}>Summary</h6>
                 </div>
+
+                <div className={classes.row}>
+                  <p className={classes.cartTotal}>Delivery Charge</p>
+                  <p className={classes.cartTotal}>$0</p>
+                </div>
                 
                 <Button
                   className={classes.checkoutButton}

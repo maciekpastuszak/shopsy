@@ -18,8 +18,14 @@ const CartItem = ({ product, title, metaImage, qty, addItemToCart }) => {
     setQuantity(updatedQty)
     addItemToCart({ product, quantity: Number(updatedQty) })
   }
+
+  const incrementQty = () => {
+    const updatedQty = quantity + 1
+
+    setQuantity(updatedQty)
+    addItemToCart({ product, quantity: Number(updatedQty) })
+  }
   
-  const incrementQty = () => {}
   const enterQty = () => {}
 
   return (

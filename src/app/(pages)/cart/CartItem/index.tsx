@@ -25,8 +25,13 @@ const CartItem = ({ product, title, metaImage, qty, addItemToCart }) => {
     setQuantity(updatedQty)
     addItemToCart({ product, quantity: Number(updatedQty) })
   }
-  
-  const enterQty = () => {}
+
+ const enterQty = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const updatedQty = Number(e.target.value)
+
+    setQuantity(updatedqty)
+    addItemToCart({ product, quantity: Number(updatedQty) })
+  }
 
   return (
     <li className={classes.item} key={title}>

@@ -5,9 +5,10 @@ import { Price } from '../../../_components/Price'
 
 import classes from './index.module.scss'
 
-const CheckoutItem = () => {
+export const CheckoutItem = ({ product, title, metaImage, quantity, index }) => {
   return (
-    <div>CheckoutItem</div>
+    <li className={classes.item} key={index}>
+    </li>
   )
 }
 

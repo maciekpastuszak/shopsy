@@ -14,6 +14,15 @@ export const CheckoutItem = ({ product, title, metaImage, quantity, index }) => 
             <Media className={classes.media} imgClassName={classes.image} resource={metaImage} fill />
             )}
       </Link>
+
+      <div className={classes.itemDetails}>
+        <div>
+          <h6>{title}</h6>
+          <Price product={product} button={false} />
+        </div>
+        <p>x{quantity}</p>
+      </div>
+
     </li>
   )
 }

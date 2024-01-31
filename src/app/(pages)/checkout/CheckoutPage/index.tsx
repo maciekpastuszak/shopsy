@@ -75,4 +75,6 @@ export const CheckoutPage: React.FC<{
     }
   }, [cart, user])
   
+  if (!user || !stripe) return null
+  
 }

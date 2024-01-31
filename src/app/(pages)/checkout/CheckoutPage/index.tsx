@@ -74,7 +74,22 @@ export const CheckoutPage: React.FC<{
       makeIntent()
     }
   }, [cart, user])
-  
+
   if (!user || !stripe) return null
   
+  return (
+    <Fragment>
+      {cartIsEmpty && (
+        <div>
+          {'Your '}
+          <Link href="/cart">cart</Link>
+          {' is empty.'}
+          {typeof productsPage === 'object' && productsPage?.slug && (
+          )}
+        </div>
+      )}
+
+     
+    </Fragment>
+  )
 }

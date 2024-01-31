@@ -59,10 +59,20 @@ export const CheckoutPage: React.FC<{
           )
 
           const res = await paymentReq.json()
+
+          if (res.error) {
+            setError(res.error)
+          } else if (res.client_secret) {
+            setError(null)
+            setClientSecret(res.client_secret)
+          }
+        } catch (e) {
+          setError('Something went wrong.')
+        }
       }
 
       makeIntent()
     }
   }, [cart, user])
-
+  
 }

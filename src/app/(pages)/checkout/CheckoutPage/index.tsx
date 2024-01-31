@@ -28,4 +28,19 @@ export const CheckoutPage: React.FC<{
   const {
     settings: { productsPage },
   } = props
+
+  const { user } = useAuth()
+  const router = useRouter()
+  const [error, setError] = React.useState<string | null>(null)
+  const [clientSecret, setClientSecret] = React.useState()
+  const hasMadePaymentIntent = React.useRef(false)
+  const { theme } = useTheme()
+
+  const { cart, cartIsEmpty, cartTotal } = useCart()
+
+  useEffect(() => {
+    if (user !== null && cartIsEmpty) {
+      router.push('/cart')
+    }
+  }, [router, user, cartIsEmpty])
 }

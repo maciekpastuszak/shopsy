@@ -85,6 +85,10 @@ export const CheckoutPage: React.FC<{
           <Link href="/cart">cart</Link>
           {' is empty.'}
           {typeof productsPage === 'object' && productsPage?.slug && (
+            <Fragment>
+              {' '}
+              <Link href={`/${productsPage.slug}`}>Continue shopping?</Link>
+            </Fragment>
           )}
         </div>
       )}

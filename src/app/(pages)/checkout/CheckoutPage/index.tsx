@@ -92,6 +92,20 @@ export const CheckoutPage: React.FC<{
           )}
         </div>
       )}
+      {!cartIsEmpty && (
+        <div className={classes.items}>
+          <div className={classes.header}>
+            <p>Products</p>
+            <div className={classes.headerItemDetails}>
+              <p></p>
+              <p className={classes.quantity}>Quantity</p>
+            </div>
+            <p className={classes.subtotal}>Subtotal</p>
+          </div>
+
+
+        </div>
+      )}
 
      
     </Fragment>

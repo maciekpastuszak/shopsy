@@ -17,10 +17,15 @@ import cssVariables from '../../../cssVariables'
 import { CheckoutForm } from '../CheckoutForm'
 import { CheckoutItem } from '../CheckoutItem'
 
-const CheckoutPage = () => {
-  return (
-    <div>CheckoutPage</div>
-  )
-}
+import classes from './index.module.scss'
 
-export default CheckoutPage
+const apiKey = `${process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY}`
+const stripe = loadStripe(apiKey)
+
+export const CheckoutPage: React.FC<{
+  settings: Settings
+}> = props => {
+  const {
+    settings: { productsPage },
+  } = props
+}

@@ -43,4 +43,26 @@ export const CheckoutPage: React.FC<{
       router.push('/cart')
     }
   }, [router, user, cartIsEmpty])
+
+  useEffect(() => {
+    if (user && cart && hasMadePaymentIntent.current === false) {
+      hasMadePaymentIntent.current = true
+
+      const makeIntent = async () => {
+        try {
+          const paymentReq = await fetch(
+            `${process.env.NEXT_PUBLIC_SERVER_URL}/api/create-payment-intent`,
+            {
+              method: 'POST',
+              credentials: 'include',
+            },
+          )
+
+          const res = await paymentReq.json()
+      }
+
+      makeIntent()
+    }
+  }, [cart, user])
+
 }

@@ -104,6 +104,21 @@ export const CheckoutPage: React.FC<{
           </div>
 
           <ul>
+            {cart?.items?.map((item, index) => {
+              if (typeof item.product === 'object') {
+                const {
+                  quantity,
+                  product,
+                  product: { title, meta },
+                } = item
+
+                if (!quantity) return null
+
+                const metaImage = meta?.image
+
+              }
+              return null
+            })}
             <div className={classes.orderTotal}>
               <p>Order Total</p>
               <p>{cartTotal.formatted}</p>

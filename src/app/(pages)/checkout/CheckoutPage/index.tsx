@@ -137,6 +137,11 @@ export const CheckoutPage: React.FC<{
           </ul>
         </div>
       )}
+      {!clientSecret && !error && (
+        <div className={classes.loading}>
+          <LoadingShimmer number={2} />
+        </div>
+      )}
 
      
     </Fragment>

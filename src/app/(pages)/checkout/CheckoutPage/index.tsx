@@ -148,7 +148,13 @@ export const CheckoutPage: React.FC<{
           <Button label="Back to cart" href="/cart" appearance="secondary" />
         </div>
       )}
-     
+      {clientSecret && (
+        <Fragment>
+          <h3 className={classes.payment}>Payment Details</h3>
+          {error && <p>{`Error: ${error}`}</p>}
+         
+        </Fragment>
+      )}
     </Fragment>
   )
 }

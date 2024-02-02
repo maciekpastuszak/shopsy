@@ -77,7 +77,7 @@ export const CheckoutPage: React.FC<{
 
   if (!user || !stripe) return null
   
-  return (
+   return (
     <Fragment>
       {cartIsEmpty && (
         <div>
@@ -152,9 +152,18 @@ export const CheckoutPage: React.FC<{
         <Fragment>
           <h3 className={classes.payment}>Payment Details</h3>
           {error && <p>{`Error: ${error}`}</p>}
-         
+          <Elements
+            stripe={stripe}
+            options={{
+              clientSecret,
+              appearance: {
+                theme: 'stripe',
+              },
+            }}
+          >
+            <CheckoutForm />
+          </Elements>
         </Fragment>
       )}
     </Fragment>
-  )
 }

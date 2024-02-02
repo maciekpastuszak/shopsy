@@ -116,6 +116,17 @@ export const CheckoutPage: React.FC<{
 
                 const metaImage = meta?.image
 
+                return (
+                  <Fragment key={index}>
+                    <CheckoutItem
+                      product={product}
+                      title={title}
+                      metaImage={metaImage}
+                      quantity={quantity}
+                      index={index}
+                    />
+                  </Fragment>
+                )
               }
               return null
             })}

@@ -24,3 +24,29 @@
 .headersubtotal {
   text-align: end;
 }
+
+.subtotal {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.orderTotal {
+  margin-top: var(--base);
+  font-weight: 600;
+  text-align: end;
+  display: flex;
+  justify-content: space-between;
+  padding: 24px;
+  margin-bottom: 60px;
+  background-color: var(--color-dark-50);
+}
+
+.payment {
+  margin-bottom: 40px;
+}
+
+.loading,
+.error {
+  margin-top: calc(var(--block-padding) - var(--base));
+}
